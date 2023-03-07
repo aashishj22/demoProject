@@ -15,15 +15,15 @@ public class StudentController {
     @Autowired
     private StudentRepository studentRepository;
 
-    // get all employees
+    // get all Students
     @GetMapping("/students")
-    public List<Student> getAllEmployees(){
+    public List<Student> getAllStudents(){
         return studentRepository.findAll();
     }
 
-    // create employee rest api
+    // create students rest api
     @PostMapping("/students")
-    public Student createEmployee(@RequestBody Student employee) {
-        return studentRepository.save(employee);
+    public Student createStudents(@RequestBody Student Students) {
+        return studentRepository.save(Students);
     }
 }
